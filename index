@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>商品列表</title>
+</head>
+<body>
+
+<h1>商品列表</h1>
+
+<ul>
+  <li><a href="product1.html">产品A</a></li>
+  <li><a href="product2.html">产品B</a></li>
+  <li><a href="product3.html">产品C</a></li>
+</ul>
+
+</body>
+</html>
