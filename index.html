@@ -1,323 +1,868 @@
- (cd "$(git rev-parse --show-toplevel)" && git apply --3way <<'EOF' 
-diff --git a/index.html b/index.html
-index 16459fed0f2669bdcc4c8e4aec9b2a8e9687d15e..a9f5220427ae3ee4ffffff0ae18da06a50dab572 100644
---- a/index.html
-+++ b/index.html
-@@ -1,43 +1,48 @@
- <!DOCTYPE html>
- <html>
- <head>
-   <meta charset="UTF-8">
-   <title>产品列表</title>
- 
-   <style>
-     body {
-       font-family: Arial;
-       max-width: 700px;
-       margin: auto;
-       line-height: 1.6;
-     }
-     img {
-       display: block;
-       margin: 10px 0;
-       max-width: 100%;
-     }
-+    .image-caption {
-+      margin: -2px 0 12px;
-+      font-size: 14px;
-+      color: #555;
-+    }
-     a {
-       text-decoration: none;
-       color: blue;
-     }
-     hr {
-       margin: 30px 0;
-     }
-   </style>
- 
- </head>
- <body>
- <h2>购买流程</h2>
- 
- <ul>
-   <li><a href="#flow-domestic">国内购买流程</a></li>
-   <li><a href="#flow-international">国际购买流程</a></li>
- </ul>
- 
- <hr>
- <h1>产品列表</h1>
- 
- <!-- 🔝 目录 -->
- <ul>
-   <li><a href="#p15">色针</a></li>
-   <li><a href="#p8">50新色</a></li>
-@@ -126,175 +131,192 @@ However, all shipments are sent via air, and most parcels arrive within a reason
- Shipping Fee
- The fees listed below are estimated and for reference only.
- Actual shipping costs are based on CNY and may change depending on product weight, quantity, or contents (e.g. liquids, gels).
- Please confirm the final fee with our customer service before payment.
- If you have a forwarding warehouse in China, you only need to pay ¥10 for shipping
- Macau / Taiwan: ¥75
- Malaysia / Singapore: ¥100
- Korea / Japan: ¥180
- Most European countries: ¥240
- USA / Canada / Australia: ¥280
- For other countries, please contact us for a quote.
- We accept payment via USDT or Alipay only.
- 
- All shipments follow FCA (Free Carrier) Incoterms. This means that once the package is handed over to the shipping company or forwarder, 
- our responsibility ends — even if we help arrange the shipping. 
- For details, please refer to the Incoterms® 2020 rules issued by the International Chamber of Commerce
-   </p>
- </div>
- <hr>
- 
- <!-- 🧱 产品列表（自动对应你的图片） -->
- 
- <div id="p1">
-   <h2>100土色</h2>
-   <img src="images/100土色.jpg">
-<p class="image-caption">
-一盒3板  一板10片  一片100mg。<br>
-有效成分  醋酸环丙孕酮 <br>
-一天一般12.5mg，口服 <br>
-产地  欧洲
-</p>   <a href="https://t.me/Kanna_Pharmacy">联系购买</a><br>
-   <a href="#">返回顶部</a>
- </div>
- 
- <hr>
- 
- <div id="p2">
-   <h2>100新色</h2>
-   <img src="images/100新色.jpg">
-  <p class="image-caption">
-一盒5板  一板10片  一片100mg。<br>
-有效成分  醋酸环丙孕酮 <br>
-一天一般12.5mg，口服 <br>
-产地  新西兰
-</p>
-   <a href="https://t.me/Kanna_Pharmacy">联系购买</a><br>
-   <a href="#">返回顶部</a>
- </div>
- 
- <hr>
- 
- <div id="p3">
-   <h2>dayvigo</h2>
-   <img src="images/dayvigo.jpg">
-  <p class="image-caption">
-  规格5mg*100tabs <br>
-  它是一种【非管制的】治疗失眠的新型药物。可以通过阻断脑内促进觉醒的神经递质食欲素受体，从而帮助患者入睡和维持睡眠。与传统的苯二氮卓类药物相比，Dayvigo 对睡眠结构影响较小，成瘾性风险也更低。<br>
-</p>
-   <a href="https://t.me/Kanna_Pharmacy">联系购买</a><br>
-   <a href="#">返回顶部</a>
- </div>
- 
- <hr>
- 
- <div id="p4">
-   <h2>伊迪蒙</h2>
-   <img src="images/伊迪蒙.jpg">
-  <p class="image-caption">一盒100粒  一粒0.625mg雌激素，口服。</p>
-   <a href="https://t.me/Kanna_Pharmacy">联系购买</a><br>
-   <a href="#">返回顶部</a>
- </div>
- 
- <hr>
- 
- <div id="p5">
-   <h2>凝胶新</h2>
-   <img src="images/凝胶新.jpg">
-  <p class="image-caption">
-一盒80g  含48mg雌二醇 <br>
-有效成分  雌二醇 <br>
-一般一天一量尺，即2.5g（量尺会自带），推荐涂大腿内侧 <br>
-不要涂胸！ 产地泰国
-</p>
-   <a href="https://t.me/Kanna_Pharmacy">联系购买</a><br>
-   <a href="#">返回顶部</a>
- </div>
- 
- <hr>
- 
- <div id="p6">
-   <h2>土色</h2>
-   <img src="images/土色.jpg">
-  <p class="image-caption">
-一盒3板  一板10片  一片100mg。<br>
-有效成分  醋酸环丙孕酮 <br>
-一天一般12.5mg，口服 <br>
-产地  欧洲  
-</p>
-   <a href="https://t.me/Kanna_Pharmacy">联系购买</a><br>
-   <a href="#">返回顶部</a>
- </div>
- 
- <hr>
- 
- <div id="p7">
-   <h2>新比卡</h2>
-   <img src="images/新比卡.jpg">
-  <p class="image-caption">
-一盒28片  一片50mg <br>
-有效成分  比卡鲁胺 <br>
-一天一般50mg，口服 <br>
-产地  新西兰  <br>
-</p>
-   <a href="https://t.me/Kanna_Pharmacy">联系购买</a><br>
-   <a href="#">返回顶部</a>
- </div>
- 
- <hr>
- 
- <div id="p8">
-   <h2>新色</h2>
-   <img src="images/新色.jpg">
-  <p class="image-caption">
-一盒5板  一板10片  一片50mg <br>
-有效成分   醋酸环丙孕酮 <br>
-一天一般12.5mg，口服 <br>
-产地新西兰  <br>
-</p>
-   <a href="https://t.me/Kanna_Pharmacy">联系购买</a><br>
-   <a href="#">返回顶部</a>
- </div>
- 
- <hr>
- 
- <div id="p9">
-   <h2>新补</h2>
-   <img src="images/新补.jpg">
-  <p class="image-caption">
-一盒3板  一板28片  一片2mg <br>
-有效成分  戊酸雌二醇 <br>
-一天2mg~6mg  ，一般2~4mg，视人而定，口服 <br>
-产地  新西兰  <br>
-</p>
-   <a href="https://t.me/Kanna_Pharmacy">联系购买</a><br>
-   <a href="#">返回顶部</a>
- </div>
- 
- <hr>
- 
- <div id="p10">
-   <h2>日本比卡</h2>
-   <img src="images/日本比卡.jpg">
-  <p class="image-caption">
-一盒100片  一片80mg<br>
-有效成分  比卡鲁胺<br>
-比卡一天一般50mg（可以考虑日本比卡一片对半服用，主要根据自身睾酮水平调整用量，口服<br>
-产地  日本 <br>
-   <br>
-   <a href="https://t.me/Kanna_Pharmacy">联系购买</a><br>
-   <a href="#">返回顶部</a>
- </div>
- 
- <hr>
- 
- <div id="p11">
-   <h2>日本贴片</h2>
-   <img src="images/日本贴片.jpg">
-  <p class="image-caption">
-一盒70片  一片0.72mg<br>
-有效成分  雌二醇<br>
-一般两天一片，贴于下腹部或者臀部<br>
-产地  日本 <br>
-</p>
-   <a href="https://t.me/Kanna_Pharmacy">联系购买</a><br>
-   <a href="#">返回顶部</a>
- </div>
- 
- <hr>
- 
- <div id="p12">
-   <h2>日雌</h2>
-   <img src="images/日雌.jpg">
-  <p class="image-caption">
-一盒10支  一支1ml  一支10mg戊酸雌二醇 <br>
-有效成分  戊酸雌二醇 <br>
-一般1到2周一针，肌肉注射 <br>
-产地   日本  <br>
-</p>
-   <a href="https://t.me/Kanna_Pharmacy">联系购买</a><br>
-   <a href="#">返回顶部</a>
- </div>
- 
- <hr>
- 
- <div id="p13">
-   <h2>泰补</h2>
-   <img src="images/泰补.jpg">
-  <p class="image-caption">
-一盒3板  一板28片  一片2mg <br>
-有效成分  戊酸雌二醇 <br>
-一天2mg~6mg  ，一般2~4mg，视人而定，口服 <br>
-产地  泰国  <br>
-</p>
-   <a href="https://t.me/Kanna_Pharmacy">联系购买</a><br>
-   <a href="#">返回顶部</a>
- </div>
- 
- <hr>
- 
- <div id="p14">
-   <h2>睾酮</h2>
-   <img src="images/睾酮.jpg">
-  <p class="image-caption">
-一盒一支  一支1ml   含250mg庚酸睾酮<br>
-肌肉注射<br>
-德国生产<br>
-</p>
-   <a href="https://t.me/Kanna_Pharmacy">联系购买</a><br>
-   <a href="#">返回顶部</a>
- </div>
- 
- <hr>
- 
- <div id="p15">
-   <h2>色针</h2>
-   <img src="images/色针.jpg">
-  <p class="image-caption">
-规格：一盒一支，一支3ml，含300mg<br>
-有效成分：醋酸环丙孕酮<br>
-一般一个月一针，或根据自身情况调节<br>
-生产商：拜耳  <br>
-</p>
-   <a href="https://t.me/Kanna_Pharmacy">联系购买</a><br>
-   <a href="#">返回顶部</a>
- </div>
- 
- <hr>
- 
- <div id="p16">
-   <h2>苯雌</h2>
-   <img src="images/苯雌.jpg">
-  <p class="image-caption">
-一盒10支  一支5mg苯甲酸雌二醇  一支1ml<br>
-有效成分  苯甲酸雌二醇<br>
-一般半周到5天一针，肌肉注射<br>
-产地  泰国  <br>
-</p>
-   <a href="https://t.me/Kanna_Pharmacy">联系购买</a><br>
-   <a href="#">返回顶部</a>
- </div>
- 
- <hr>
- 
- <div id="p17">
-   <h2>诺</h2>
-   <img src="images/诺.jpg">
-  <p class="image-caption">
-  一盒一板  一板28片  一片2mg <br>
-有效成分  雌二醇<br>
-一天2mg到6mg，一般2~4mg，视人而定，口服<br>
-产地泰国<br>
-</p>
-   <a href="https://t.me/Kanna_Pharmacy">联系购买</a><br>
-   <a href="#">返回顶部</a>
- </div>
- 
- </body>
- </html>
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HRT 药品目录 — Kanna Pharmacy</title>
+  <style>
+    :root {
+      --purple:     #7C5CBF;
+      --purple-lt:  #A07DD6;
+      --purple-bg:  #F3EEFF;
+      --pink:       #C97DB5;
+      --pink-lt:    #F5D0EA;
+      --green:      #5BA08A;
+      --green-lt:   #D4EDE6;
+      --teal:       #4A8FA8;
+      --teal-lt:    #D0EAF4;
+      --orange:     #D4845A;
+      --orange-lt:  #FAE3D4;
+      --text:       #1E1B2E;
+      --text-muted: #6B6880;
+      --border:     #E2D9F3;
+      --card-bg:    #FFFFFF;
+      --bg:         #F9F7FF;
+      --radius:     12px;
+      --shadow:     0 2px 12px rgba(124,92,191,0.10);
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Hiragino Sans GB",
+                   "Microsoft YaHei", sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.7;
+    }
+
+    /* ── Header ── */
+    .site-header {
+      background: linear-gradient(135deg, #6B46C1 0%, #9B6DD6 50%, #C97DB5 100%);
+      color: #fff;
+      padding: 32px 20px 28px;
+      text-align: center;
+    }
+    .site-header h1 { font-size: 1.8rem; font-weight: 700; letter-spacing: .03em; }
+    .site-header p  { margin-top: 6px; font-size: .95rem; opacity: .88; }
+    .telegram-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      margin-top: 16px;
+      padding: 10px 22px;
+      background: rgba(255,255,255,0.2);
+      border: 1.5px solid rgba(255,255,255,0.5);
+      border-radius: 999px;
+      color: #fff;
+      text-decoration: none;
+      font-size: .9rem;
+      font-weight: 600;
+      transition: background .2s;
+    }
+    .telegram-btn:hover { background: rgba(255,255,255,0.32); }
+    .telegram-btn svg { width:18px; height:18px; fill:#fff; flex-shrink:0; }
+
+    /* ── Main layout ── */
+    main {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 28px 16px 60px;
+    }
+
+    /* ── Buying Process accordion ── */
+    .info-accordion {
+      margin-bottom: 28px;
+      border: 1.5px solid var(--border);
+      border-radius: var(--radius);
+      overflow: hidden;
+      background: var(--card-bg);
+      box-shadow: var(--shadow);
+    }
+    .info-accordion summary {
+      list-style: none;
+      padding: 16px 20px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      font-weight: 700;
+      font-size: 1rem;
+      color: var(--purple);
+      user-select: none;
+    }
+    .info-accordion summary::-webkit-details-marker { display: none; }
+    .info-accordion summary::after {
+      content: "＋";
+      font-size: 1.2rem;
+      transition: transform .3s;
+    }
+    .info-accordion[open] summary::after { content: "－"; }
+    .info-accordion .accordion-body {
+      padding: 0 20px 20px;
+      border-top: 1px solid var(--border);
+    }
+
+    /* ── Flow grid ── */
+    .flow-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+      margin-top: 16px;
+    }
+    @media (max-width: 580px) { .flow-grid { grid-template-columns: 1fr; } }
+    .flow-card {
+      background: var(--purple-bg);
+      border-radius: 10px;
+      padding: 14px 16px;
+    }
+    .flow-card h4 {
+      font-size: .88rem;
+      font-weight: 700;
+      color: var(--purple);
+      margin-bottom: 8px;
+    }
+    .flow-card ol {
+      padding-left: 18px;
+      font-size: .85rem;
+      color: var(--text-muted);
+    }
+    .flow-card ol li { margin-bottom: 4px; }
+
+    .shipping-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 14px;
+      font-size: .85rem;
+    }
+    .shipping-table th {
+      background: var(--purple-bg);
+      color: var(--purple);
+      font-weight: 700;
+      padding: 8px 12px;
+      text-align: left;
+    }
+    .shipping-table td {
+      padding: 7px 12px;
+      border-bottom: 1px solid var(--border);
+      color: var(--text-muted);
+    }
+    .shipping-table tr:last-child td { border-bottom: none; }
+
+    .notice {
+      margin-top: 12px;
+      padding: 10px 14px;
+      background: #FFF8EC;
+      border-left: 3px solid #F0A500;
+      border-radius: 6px;
+      font-size: .83rem;
+      color: #5A4200;
+    }
+
+    /* ── Category sections ── */
+    .category {
+      margin-bottom: 20px;
+      border-radius: var(--radius);
+      overflow: hidden;
+      box-shadow: var(--shadow);
+      border: 1.5px solid var(--border);
+      background: var(--card-bg);
+    }
+    .category summary {
+      list-style: none;
+      cursor: pointer;
+      padding: 18px 22px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      user-select: none;
+      font-weight: 700;
+      font-size: 1.05rem;
+    }
+    .category summary::-webkit-details-marker { display: none; }
+    .category summary .chevron {
+      margin-left: auto;
+      font-size: 1.1rem;
+      transition: transform .3s;
+      color: inherit;
+      opacity: .6;
+    }
+    .category[open] summary .chevron { transform: rotate(180deg); }
+
+    .cat-anti   summary { color: #5B3FA0; background: linear-gradient(90deg, #EDE5FF, #F9F7FF); }
+    .cat-estro  summary { color: #9B3A79; background: linear-gradient(90deg, #FFE9F6, #FFF7FD); }
+    .cat-other  summary { color: #2E7D6A; background: linear-gradient(90deg, #E2F4EF, #F7FDFB); }
+
+    .cat-icon {
+      width: 36px; height: 36px;
+      border-radius: 8px;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1.2rem;
+      flex-shrink: 0;
+    }
+    .cat-anti  .cat-icon { background: #DDD3FA; }
+    .cat-estro .cat-icon { background: #FADDF0; }
+    .cat-other .cat-icon { background: #C8EDE4; }
+
+    .cat-meta {
+      display: flex;
+      flex-direction: column;
+    }
+    .cat-meta span {
+      font-size: .78rem;
+      font-weight: 400;
+      opacity: .7;
+      margin-top: 2px;
+    }
+
+    /* ── Product grid ── */
+    .product-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+      gap: 16px;
+      padding: 16px;
+      border-top: 1px solid var(--border);
+    }
+
+    /* ── Product card ── */
+    .card {
+      border-radius: 10px;
+      border: 1.5px solid var(--border);
+      overflow: hidden;
+      background: #fff;
+      transition: transform .2s, box-shadow .2s;
+      display: flex;
+      flex-direction: column;
+    }
+    .card:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 6px 24px rgba(124,92,191,0.15);
+    }
+    .card-img-wrap {
+      position: relative;
+      height: 180px;
+      background: #F5F3FA;
+      overflow: hidden;
+    }
+    .card-img-wrap img {
+      width: 100%; height: 100%;
+      object-fit: cover;
+      transition: transform .4s;
+    }
+    .card:hover .card-img-wrap img { transform: scale(1.04); }
+
+    .card-body {
+      padding: 14px 14px 10px;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+    }
+    .card-name {
+      font-size: 1rem;
+      font-weight: 700;
+      color: var(--text);
+      margin-bottom: 6px;
+    }
+    .card-ingredient {
+      font-size: .78rem;
+      color: var(--purple);
+      font-weight: 600;
+      margin-bottom: 8px;
+    }
+
+    /* badges */
+    .badges {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 5px;
+      margin-bottom: 10px;
+    }
+    .badge {
+      font-size: .72rem;
+      padding: 2px 8px;
+      border-radius: 999px;
+      font-weight: 600;
+    }
+    .badge-origin  { background: var(--purple-bg); color: var(--purple); }
+    .badge-form    { background: var(--teal-lt);   color: var(--teal);   }
+    .badge-dose    { background: var(--orange-lt);  color: var(--orange); }
+    .badge-special { background: var(--green-lt);   color: var(--green);  }
+
+    .card-desc {
+      font-size: .82rem;
+      color: var(--text-muted);
+      line-height: 1.6;
+      flex: 1;
+    }
+    .card-desc strong { color: var(--text); }
+
+    .card-footer {
+      padding: 10px 14px 12px;
+      border-top: 1px solid var(--border);
+    }
+    .buy-btn {
+      display: block;
+      width: 100%;
+      text-align: center;
+      padding: 9px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-size: .85rem;
+      font-weight: 700;
+      transition: opacity .2s;
+    }
+    .buy-btn:hover { opacity: .85; }
+    .cat-anti  .buy-btn { background: linear-gradient(90deg,#7C5CBF,#9B6DD6); color:#fff; }
+    .cat-estro .buy-btn { background: linear-gradient(90deg,#C97DB5,#E09AD0); color:#fff; }
+    .cat-other .buy-btn { background: linear-gradient(90deg,#5BA08A,#7BBDAA); color:#fff; }
+
+    /* ── Scrollbar ── */
+    ::-webkit-scrollbar { width: 6px; }
+    ::-webkit-scrollbar-track { background: transparent; }
+    ::-webkit-scrollbar-thumb { background: var(--border); border-radius: 3px; }
+
+    /* ── Footer ── */
+    footer {
+      text-align: center;
+      padding: 20px;
+      font-size: .8rem;
+      color: var(--text-muted);
+      border-top: 1px solid var(--border);
+    }
+  </style>
+</head>
+<body>
+
+<!-- ═══════════════════════════ HEADER ═══════════════════════════ -->
+<header class="site-header">
+  <h1>🌸 HRT 药品目录</h1>
+  <p>Kanna Pharmacy · 专业 HRT 用药 · 全球配送</p>
+  <div style="display:flex;gap:12px;flex-wrap:wrap;justify-content:center;margin-top:16px;">
+    <a class="telegram-btn" href="https://t.me/Kanna_Pharmacy" target="_blank">
+      <svg viewBox="0 0 24 24"><path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.894 8.221-1.97 9.28c-.145.658-.537.818-1.084.508l-3-2.21-1.447 1.394c-.16.16-.295.295-.605.295l.213-3.053 5.56-5.023c.242-.213-.054-.333-.373-.12L8.32 13.617l-2.96-.924c-.643-.204-.657-.643.136-.953l11.57-4.461c.537-.194 1.006.131.828.942z"/></svg>
+      联系客服 / 购买咨询 · @Kanna_Pharmacy
+    </a>
+    <a class="telegram-btn" href="https://t.me/proluton" target="_blank">
+      <svg viewBox="0 0 24 24"><path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.894 8.221-1.97 9.28c-.145.658-.537.818-1.084.508l-3-2.21-1.447 1.394c-.16.16-.295.295-.605.295l.213-3.053 5.56-5.023c.242-.213-.054-.333-.373-.12L8.32 13.617l-2.96-.924c-.643-.204-.657-.643.136-.953l11.57-4.461c.537-.194 1.006.131.828.942z"/></svg>
+      📢 通知频道
+    </a>
+  </div>
+</header>
+
+<main>
+
+  <!-- ═══════════════════════ BUYING PROCESS ═══════════════════════ -->
+  <details class="info-accordion" open>
+    <summary>📦 购买流程 &amp; 运费说明</summary>
+    <div class="accordion-body">
+      <div class="flow-grid">
+        <div class="flow-card">
+          <h4>🇨🇳 国内购买流程</h4>
+          <ol>
+            <li>联系 Telegram 客服</li>
+            <li>告知所需药品及数量</li>
+            <li>确认价格及付款方式</li>
+            <li>付款（USDT 或支付宝）</li>
+            <li>提供收货地址</li>
+            <li>等待发货，跟踪物流</li>
+          </ol>
+        </div>
+        <div class="flow-card">
+          <h4>🌏 国际购买流程</h4>
+          <ol>
+            <li>联系 Telegram 客服</li>
+            <li>确认目标国家及药品</li>
+            <li>客服报价（含运费）</li>
+            <li>付款（USDT 或支付宝）</li>
+            <li>提供收货地址</li>
+            <li>空运发出，追踪物流</li>
+          </ol>
+        </div>
+      </div>
+
+      <table class="shipping-table">
+        <thead>
+          <tr><th>目的地</th><th>参考运费（CNY）</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>中国境内转运仓</td><td>¥10</td></tr>
+          <tr><td>澳门 / 台湾</td><td>¥75</td></tr>
+          <tr><td>马来西亚 / 新加坡</td><td>¥100</td></tr>
+          <tr><td>韩国 / 日本</td><td>¥180</td></tr>
+          <tr><td>欧洲大部分国家</td><td>¥240</td></tr>
+          <tr><td>美国 / 加拿大 / 澳大利亚</td><td>¥280</td></tr>
+          <tr><td>其他国家</td><td>联系客服报价</td></tr>
+        </tbody>
+      </table>
+
+      <div class="notice">
+        ⚠️ 运费以实际重量和内容物为准，以上为估算参考。<br>
+        付款方式：<strong>USDT 或支付宝</strong>。所有货物按 FCA（货交承运人）条款发出，交付承运人后责任终止。
+      </div>
+    </div>
+  </details>
+
+  <!-- ═══════════════════════ 抗雄激素药物 ═══════════════════════ -->
+  <details class="category cat-anti" open>
+    <summary>
+      <div class="cat-icon">🛡️</div>
+      <div class="cat-meta">
+        抗雄激素药物
+        <span>Antiandrogens · 7 种产品</span>
+      </div>
+      <span class="chevron">▾</span>
+    </summary>
+
+    <div class="product-grid">
+
+      <!-- 100土色 -->
+      <div class="card">
+        <div class="card-img-wrap">
+          <img src="images/100土色.jpg" alt="100土色 醋酸环丙孕酮 100mg">
+        </div>
+        <div class="card-body">
+          <div class="card-name">100土色</div>
+          <div class="card-ingredient">醋酸环丙孕酮 Cyproterone Acetate</div>
+          <div class="badges">
+            <span class="badge badge-dose">100mg / 片</span>
+            <span class="badge badge-form">口服</span>
+            <span class="badge badge-origin">欧洲产</span>
+          </div>
+          <p class="card-desc">
+            一盒 3 板，每板 10 片，共 30 片。<br>
+            <strong>推荐用量：</strong>12.5mg / 天（¼ 片）。<br>
+            醋酸环丙孕酮（色谱酮）是 MTF HRT 最常用的抗雄药物，通过竞争性阻断雄激素受体并抑制促性腺激素分泌，有效降低体内睾酮水平。欧洲原产，品质稳定。
+          </p>
+        </div>
+        <div class="card-footer">
+          <a class="buy-btn" href="https://t.me/Kanna_Pharmacy" target="_blank">💬 联系购买</a>
+        </div>
+      </div>
+
+      <!-- 100新色 -->
+      <div class="card">
+        <div class="card-img-wrap">
+          <img src="images/100新色.jpg" alt="100新色 醋酸环丙孕酮 100mg 新西兰">
+        </div>
+        <div class="card-body">
+          <div class="card-name">100新色</div>
+          <div class="card-ingredient">醋酸环丙孕酮 Cyproterone Acetate</div>
+          <div class="badges">
+            <span class="badge badge-dose">100mg / 片</span>
+            <span class="badge badge-form">口服</span>
+            <span class="badge badge-origin">新西兰产</span>
+          </div>
+          <p class="card-desc">
+            一盒 5 板，每板 10 片，共 50 片。<br>
+            <strong>推荐用量：</strong>12.5mg / 天（¼ 片）。<br>
+            新西兰原产版本，大规格包装更经济实惠。同样含醋酸环丙孕酮，适合长期使用或囤货需求。
+          </p>
+        </div>
+        <div class="card-footer">
+          <a class="buy-btn" href="https://t.me/Kanna_Pharmacy" target="_blank">💬 联系购买</a>
+        </div>
+      </div>
+
+      <!-- 土色 -->
+      <div class="card">
+        <div class="card-img-wrap">
+          <img src="images/土色.jpg" alt="土色 醋酸环丙孕酮 100mg">
+        </div>
+        <div class="card-body">
+          <div class="card-name">土色</div>
+          <div class="card-ingredient">醋酸环丙孕酮 Cyproterone Acetate</div>
+          <div class="badges">
+            <span class="badge badge-dose">100mg / 片</span>
+            <span class="badge badge-form">口服</span>
+            <span class="badge badge-origin">欧洲产</span>
+          </div>
+          <p class="card-desc">
+            一盒 3 板，每板 10 片，共 30 片。<br>
+            <strong>推荐用量：</strong>12.5mg / 天（¼ 片）。<br>
+            欧洲进口，旧版包装，成分与 100土色 相同。价格较亲民，效果等同。
+          </p>
+        </div>
+        <div class="card-footer">
+          <a class="buy-btn" href="https://t.me/Kanna_Pharmacy" target="_blank">💬 联系购买</a>
+        </div>
+      </div>
+
+      <!-- 新色 -->
+      <div class="card">
+        <div class="card-img-wrap">
+          <img src="images/新色.jpg" alt="新色 醋酸环丙孕酮 50mg 新西兰">
+        </div>
+        <div class="card-body">
+          <div class="card-name">新色（50mg）</div>
+          <div class="card-ingredient">醋酸环丙孕酮 Cyproterone Acetate</div>
+          <div class="badges">
+            <span class="badge badge-dose">50mg / 片</span>
+            <span class="badge badge-form">口服</span>
+            <span class="badge badge-origin">新西兰产</span>
+          </div>
+          <p class="card-desc">
+            一盒 5 板，每板 10 片，共 50 片。<br>
+            <strong>推荐用量：</strong>12.5mg / 天（¼ 片），分割方便。<br>
+            50mg 规格更便于准确分割剂量，对初用或低剂量方案尤为友好。
+          </p>
+        </div>
+        <div class="card-footer">
+          <a class="buy-btn" href="https://t.me/Kanna_Pharmacy" target="_blank">💬 联系购买</a>
+        </div>
+      </div>
+
+      <!-- 色针 -->
+      <div class="card">
+        <div class="card-img-wrap">
+          <img src="images/色针.jpg" alt="色针 醋酸环丙孕酮注射液 300mg 拜耳">
+        </div>
+        <div class="card-body">
+          <div class="card-name">色针（注射）</div>
+          <div class="card-ingredient">醋酸环丙孕酮 注射液</div>
+          <div class="badges">
+            <span class="badge badge-dose">300mg / 支</span>
+            <span class="badge badge-form">肌肉注射</span>
+            <span class="badge badge-special">长效 · 月注射</span>
+          </div>
+          <p class="card-desc">
+            一盒一支，3ml/支，含 300mg 醋酸环丙孕酮。<br>
+            <strong>生产商：拜耳（Bayer）</strong>。<br>
+            长效注射剂型，一般每月注射一次，免去每日口服的麻烦，血药浓度更稳定。适合依从性要求高或口服效果不稳定的用户。
+          </p>
+        </div>
+        <div class="card-footer">
+          <a class="buy-btn" href="https://t.me/Kanna_Pharmacy" target="_blank">💬 联系购买</a>
+        </div>
+      </div>
+
+      <!-- 日本比卡 -->
+      <div class="card">
+        <div class="card-img-wrap">
+          <img src="images/日本比卡.jpg" alt="日本比卡 比卡鲁胺 80mg 日本">
+        </div>
+        <div class="card-body">
+          <div class="card-name">日本比卡</div>
+          <div class="card-ingredient">比卡鲁胺 Bicalutamide</div>
+          <div class="badges">
+            <span class="badge badge-dose">80mg / 片</span>
+            <span class="badge badge-form">口服</span>
+            <span class="badge badge-origin">日本产</span>
+          </div>
+          <p class="card-desc">
+            一盒 100 片，每片 80mg。<br>
+            <strong>推荐用量：</strong>25～50mg / 天，可对半切服用。<br>
+            比卡鲁胺是纯雄激素受体拮抗剂，不抑制睾酮分泌，而是在受体层面阻断雄激素作用，适合与雌激素联用或单药启动。日本产品质可靠，大装量性价比高。
+          </p>
+        </div>
+        <div class="card-footer">
+          <a class="buy-btn" href="https://t.me/Kanna_Pharmacy" target="_blank">💬 联系购买</a>
+        </div>
+      </div>
+
+      <!-- 新比卡 -->
+      <div class="card">
+        <div class="card-img-wrap">
+          <img src="images/新比卡.jpg" alt="新比卡 比卡鲁胺 50mg 新西兰">
+        </div>
+        <div class="card-body">
+          <div class="card-name">新比卡</div>
+          <div class="card-ingredient">比卡鲁胺 Bicalutamide</div>
+          <div class="badges">
+            <span class="badge badge-dose">50mg / 片</span>
+            <span class="badge badge-form">口服</span>
+            <span class="badge badge-origin">新西兰产</span>
+          </div>
+          <p class="card-desc">
+            一盒 28 片，每片 50mg。<br>
+            <strong>推荐用量：</strong>50mg / 天，一片一次。<br>
+            新西兰原产比卡鲁胺，标准 50mg 规格，剂量精准无需分割。适合用量明确的稳定期用户。
+          </p>
+        </div>
+        <div class="card-footer">
+          <a class="buy-btn" href="https://t.me/Kanna_Pharmacy" target="_blank">💬 联系购买</a>
+        </div>
+      </div>
+
+    </div><!-- /product-grid -->
+  </details>
+
+
+  <!-- ═══════════════════════ 雌激素类药物 ═══════════════════════ -->
+  <details class="category cat-estro" open>
+    <summary>
+      <div class="cat-icon">🌸</div>
+      <div class="cat-meta">
+        雌激素类药物
+        <span>Estrogens · 8 种产品</span>
+      </div>
+      <span class="chevron">▾</span>
+    </summary>
+
+    <div class="product-grid">
+
+      <!-- 苯雌 -->
+      <div class="card">
+        <div class="card-img-wrap">
+          <img src="images/苯雌.jpg" alt="苯雌 苯甲酸雌二醇注射液 5mg 泰国">
+        </div>
+        <div class="card-body">
+          <div class="card-name">苯雌（注射）</div>
+          <div class="card-ingredient">苯甲酸雌二醇 Estradiol Benzoate</div>
+          <div class="badges">
+            <span class="badge badge-dose">5mg / 支</span>
+            <span class="badge badge-form">肌肉注射</span>
+            <span class="badge badge-origin">泰国产</span>
+          </div>
+          <p class="card-desc">
+            一盒 10 支，每支 1ml，含 5mg 苯甲酸雌二醇。<br>
+            <strong>推荐频率：</strong>每 3～5 天一针。<br>
+            苯甲酸雌二醇为短效注射型雌激素，避开肝脏首过效应，生物利用度高，血药浓度峰值明显。适合需要精确控制雌激素水平的用户。泰国正规药厂生产。
+          </p>
+        </div>
+        <div class="card-footer">
+          <a class="buy-btn" href="https://t.me/Kanna_Pharmacy" target="_blank">💬 联系购买</a>
+        </div>
+      </div>
+
+      <!-- 凝胶新 -->
+      <div class="card">
+        <div class="card-img-wrap">
+          <img src="images/凝胶新.jpg" alt="凝胶新 雌二醇凝胶 泰国">
+        </div>
+        <div class="card-body">
+          <div class="card-name">凝胶新（雌二醇凝胶）</div>
+          <div class="card-ingredient">雌二醇 Estradiol 经皮凝胶</div>
+          <div class="badges">
+            <span class="badge badge-dose">48mg / 盒</span>
+            <span class="badge badge-form">经皮涂抹</span>
+            <span class="badge badge-origin">泰国产</span>
+          </div>
+          <p class="card-desc">
+            一盒 80g，含 48mg 雌二醇（0.6mg/g），附量尺。<br>
+            <strong>推荐用量：</strong>每日 1 量尺（2.5g），涂抹大腿内侧或手臂内侧。<br>
+            ⚠️ <strong>请勿涂抹胸部。</strong><br>
+            经皮给药绕过肝脏，雌二醇直接入血，对肝脏友好，且激素水平波动较平稳。适合不愿注射的用户。
+          </p>
+        </div>
+        <div class="card-footer">
+          <a class="buy-btn" href="https://t.me/Kanna_Pharmacy" target="_blank">💬 联系购买</a>
+        </div>
+      </div>
+
+      <!-- 诺 -->
+      <div class="card">
+        <div class="card-img-wrap">
+          <img src="images/诺.jpg" alt="诺 雌二醇 2mg 泰国">
+        </div>
+        <div class="card-body">
+          <div class="card-name">诺（雌二醇片）</div>
+          <div class="card-ingredient">雌二醇 Estradiol</div>
+          <div class="badges">
+            <span class="badge badge-dose">2mg / 片</span>
+            <span class="badge badge-form">口服</span>
+            <span class="badge badge-origin">泰国产</span>
+          </div>
+          <p class="card-desc">
+            一盒一板，共 28 片，每片 2mg。<br>
+            <strong>推荐用量：</strong>2～6mg / 天，视个人情况而定。<br>
+            天然雌二醇片，活性成分与体内雌激素一致，代谢后产生雌酮和雌三醇。口服方便，是最常用的 HRT 雌激素剂型之一。
+          </p>
+        </div>
+        <div class="card-footer">
+          <a class="buy-btn" href="https://t.me/Kanna_Pharmacy" target="_blank">💬 联系购买</a>
+        </div>
+      </div>
+
+      <!-- 日本贴片 -->
+      <div class="card">
+        <div class="card-img-wrap">
+          <img src="images/日本贴片.jpg" alt="日本贴片 雌二醇贴片 0.72mg 日本">
+        </div>
+        <div class="card-body">
+          <div class="card-name">日本贴片</div>
+          <div class="card-ingredient">雌二醇 Estradiol 经皮贴片</div>
+          <div class="badges">
+            <span class="badge badge-dose">0.72mg / 片</span>
+            <span class="badge badge-form">经皮贴片</span>
+            <span class="badge badge-origin">日本产</span>
+          </div>
+          <p class="card-desc">
+            一盒 70 片，每片含 0.72mg 雌二醇。<br>
+            <strong>推荐用法：</strong>每两天更换一片，贴于下腹部或臀部。<br>
+            日本进口贴片，缓释技术成熟，雌激素平稳释放 48 小时，血药浓度波动极小，是经皮给药中体验最稳定的方式之一。
+          </p>
+        </div>
+        <div class="card-footer">
+          <a class="buy-btn" href="https://t.me/Kanna_Pharmacy" target="_blank">💬 联系购买</a>
+        </div>
+      </div>
+
+      <!-- 日雌 -->
+      <div class="card">
+        <div class="card-img-wrap">
+          <img src="images/日雌.jpg" alt="日雌 戊酸雌二醇注射液 10mg 日本">
+        </div>
+        <div class="card-body">
+          <div class="card-name">日雌（戊酸雌二醇注射）</div>
+          <div class="card-ingredient">戊酸雌二醇 Estradiol Valerate 注射液</div>
+          <div class="badges">
+            <span class="badge badge-dose">10mg / 支</span>
+            <span class="badge badge-form">肌肉注射</span>
+            <span class="badge badge-origin">日本产</span>
+          </div>
+          <p class="card-desc">
+            一盒 10 支，每支 1ml，含 10mg 戊酸雌二醇。<br>
+            <strong>推荐频率：</strong>1～2 周一针。<br>
+            戊酸雌二醇进入体内水解释放雌二醇，为长效酯化型雌激素。肌肉注射后缓慢吸收，峰谷差适中，是注射雌激素中最经典的选择，日本产品质量有保障。
+          </p>
+        </div>
+        <div class="card-footer">
+          <a class="buy-btn" href="https://t.me/Kanna_Pharmacy" target="_blank">💬 联系购买</a>
+        </div>
+      </div>
+
+      <!-- 泰补 -->
+      <div class="card">
+        <div class="card-img-wrap">
+          <img src="images/泰补.jpg" alt="泰补 戊酸雌二醇 2mg 泰国">
+        </div>
+        <div class="card-body">
+          <div class="card-name">泰补</div>
+          <div class="card-ingredient">戊酸雌二醇 Estradiol Valerate</div>
+          <div class="badges">
+            <span class="badge badge-dose">2mg / 片</span>
+            <span class="badge badge-form">口服</span>
+            <span class="badge badge-origin">泰国产</span>
+          </div>
+          <p class="card-desc">
+            一盒 3 板，每板 28 片，共 84 片，每片 2mg。<br>
+            <strong>推荐用量：</strong>2～6mg / 天，视个人情况而定。<br>
+            戊酸雌二醇口服后在体内水解为雌二醇，是最常见的口服雌激素之一。泰国生产，价格亲民，大装量适合长期服用。
+          </p>
+        </div>
+        <div class="card-footer">
+          <a class="buy-btn" href="https://t.me/Kanna_Pharmacy" target="_blank">💬 联系购买</a>
+        </div>
+      </div>
+
+      <!-- 新补 -->
+      <div class="card">
+        <div class="card-img-wrap">
+          <img src="images/新补.jpg" alt="新补 戊酸雌二醇 2mg 新西兰">
+        </div>
+        <div class="card-body">
+          <div class="card-name">新补</div>
+          <div class="card-ingredient">戊酸雌二醇 Estradiol Valerate</div>
+          <div class="badges">
+            <span class="badge badge-dose">2mg / 片</span>
+            <span class="badge badge-form">口服</span>
+            <span class="badge badge-origin">新西兰产</span>
+          </div>
+          <p class="card-desc">
+            一盒 3 板，每板 28 片，共 84 片，每片 2mg。<br>
+            <strong>推荐用量：</strong>2～6mg / 天，视个人情况而定。<br>
+            新西兰进口版本的戊酸雌二醇，与泰补成分相同，新西兰制药标准较高，适合对品质有要求的用户。
+          </p>
+        </div>
+        <div class="card-footer">
+          <a class="buy-btn" href="https://t.me/Kanna_Pharmacy" target="_blank">💬 联系购买</a>
+        </div>
+      </div>
+
+      <!-- 伊迪蒙 -->
+      <div class="card">
+        <div class="card-img-wrap">
+          <img src="images/伊迪蒙.jpg" alt="伊迪蒙 结合雌激素 0.625mg">
+        </div>
+        <div class="card-body">
+          <div class="card-name">伊迪蒙（Premarin）</div>
+          <div class="card-ingredient">结合雌激素 Conjugated Estrogens</div>
+          <div class="badges">
+            <span class="badge badge-dose">0.625mg / 粒</span>
+            <span class="badge badge-form">口服</span>
+          </div>
+          <p class="card-desc">
+            一盒 100 粒，每粒含 0.625mg 结合雌激素。<br>
+            结合雌激素（Premarin）由多种雌激素成分混合而成，是较传统的 HRT 用药，适合口服雌激素初用者参考或特定需求用户。因成分复杂，相比单一雌二醇制剂监测指标需更全面。
+          </p>
+        </div>
+        <div class="card-footer">
+          <a class="buy-btn" href="https://t.me/Kanna_Pharmacy" target="_blank">💬 联系购买</a>
+        </div>
+      </div>
+
+    </div><!-- /product-grid -->
+  </details>
+
+
+  <!-- ═══════════════════════ 其他 ═══════════════════════ -->
+  <details class="category cat-other">
+    <summary>
+      <div class="cat-icon">💊</div>
+      <div class="cat-meta">
+        其他药品
+        <span>Others · 2 种产品</span>
+      </div>
+      <span class="chevron">▾</span>
+    </summary>
+
+    <div class="product-grid">
+
+      <!-- Dayvigo -->
+      <div class="card">
+        <div class="card-img-wrap">
+          <img src="images/dayvigo.jpg" alt="Dayvigo 来博雷生 5mg">
+        </div>
+        <div class="card-body">
+          <div class="card-name">Dayvigo（来博雷生）</div>
+          <div class="card-ingredient">来博雷生 Lemborexant</div>
+          <div class="badges">
+            <span class="badge badge-dose">5mg / 片</span>
+            <span class="badge badge-form">口服</span>
+            <span class="badge badge-special">非管制 · 助眠</span>
+          </div>
+          <p class="card-desc">
+            规格：5mg × 100 片。<br>
+            Dayvigo 是新一代食欲素受体拮抗剂（OX1R / OX2R），通过阻断促进觉醒的食欲素通路帮助入睡并维持睡眠。<br>
+            与传统苯二氮䓬类镇静药相比，<strong>不影响正常睡眠结构</strong>，成瘾风险极低，属<strong>非管制药品</strong>。适合因激素变化引起睡眠障碍的用户。
+          </p>
+        </div>
+        <div class="card-footer">
+          <a class="buy-btn" href="https://t.me/Kanna_Pharmacy" target="_blank">💬 联系购买</a>
+        </div>
+      </div>
+
+      <!-- 睾酮 -->
+      <div class="card">
+        <div class="card-img-wrap">
+          <img src="images/睾酮.jpg" alt="睾酮 庚酸睾酮注射液 250mg 德国">
+        </div>
+        <div class="card-body">
+          <div class="card-name">睾酮（庚酸睾酮注射）</div>
+          <div class="card-ingredient">庚酸睾酮 Testosterone Enanthate</div>
+          <div class="badges">
+            <span class="badge badge-dose">250mg / 支</span>
+            <span class="badge badge-form">肌肉注射</span>
+            <span class="badge badge-origin">德国产</span>
+          </div>
+          <p class="card-desc">
+            一盒一支，每支 1ml，含 250mg 庚酸睾酮。<br>
+            庚酸睾酮为长效酯化睾酮，肌肉注射后缓慢释放，通常每 2～4 周注射一次，主要用于 <strong>FTM（跨性别男性）雄激素治疗</strong>。德国原装进口，品质可靠。
+          </p>
+        </div>
+        <div class="card-footer">
+          <a class="buy-btn" href="https://t.me/Kanna_Pharmacy" target="_blank">💬 联系购买</a>
+        </div>
+      </div>
+
+    </div><!-- /product-grid -->
+  </details>
+
+</main>
+
+<footer>
+  <p>Kanna Pharmacy · 仅作信息参考，具体用药请遵医嘱 · <a href="https://t.me/Kanna_Pharmacy" target="_blank" style="color:var(--purple)">Telegram 联系客服</a></p>
+</footer>
+
+</body>
+</html>
