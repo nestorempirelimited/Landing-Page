@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>HRT 药品目录 — Kanna Pharmacy</title>
+  <title>HRT Product Catalog — Kanna Pharmacy</title>
   <style>
     :root {
       --purple:     #7C5CBF;
@@ -106,11 +106,10 @@
     /* ── Flow grid ── */
     .flow-grid {
       display: grid;
-      grid-template-columns: 1fr 1fr;
+      grid-template-columns: 1fr;
       gap: 16px;
       margin-top: 16px;
     }
-    @media (max-width: 580px) { .flow-grid { grid-template-columns: 1fr; } }
     .flow-card {
       background: var(--purple-bg);
       border-radius: 10px;
@@ -151,12 +150,18 @@
 
     .notice {
       margin-top: 12px;
-      padding: 10px 14px;
-      background: #FFF8EC;
-      border-left: 3px solid #F0A500;
-      border-radius: 6px;
-      font-size: .83rem;
+      padding: 14px 16px;
+      background: linear-gradient(180deg, #FFF8EC 0%, #FFFDF7 100%);
+      border-left: 4px solid #F0A500;
+      border-radius: 8px;
+      font-size: .84rem;
+      line-height: 1.65;
       color: #5A4200;
+    }
+    .notice strong:first-child {
+      display: inline-block;
+      font-size: .9rem;
+      margin-bottom: 2px;
     }
 
     /* ── Category sections ── */
@@ -335,16 +340,16 @@
 
 <!-- ═══════════════════════════ HEADER ═══════════════════════════ -->
 <header class="site-header">
-  <h1>🌸 HRT 药品目录</h1>
-  <p>Kanna Pharmacy · 专业 HRT 用药 · 全球配送</p>
+  <h1>🌸 HRT Product Catalog</h1>
+  <p>Kanna Pharmacy · Professional HRT Medications · Worldwide Shipping</p>
   <div style="display:flex;gap:12px;flex-wrap:wrap;justify-content:center;margin-top:16px;">
-    <a class="telegram-btn" href="https://t.me/Kanna_Pharmacy" target="_blank">
+    <a class="telegram-btn" href="mailto:falcon@nestorhk.com">
       <svg viewBox="0 0 24 24"><path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.894 8.221-1.97 9.28c-.145.658-.537.818-1.084.508l-3-2.21-1.447 1.394c-.16.16-.295.295-.605.295l.213-3.053 5.56-5.023c.242-.213-.054-.333-.373-.12L8.32 13.617l-2.96-.924c-.643-.204-.657-.643.136-.953l11.57-4.461c.537-.194 1.006.131.828.942z"/></svg>
-      联系客服 / 购买咨询 · @Kanna_Pharmacy
+      Contact Support / Purchase Inquiry · @Kanna_Pharmacy
     </a>
     <a class="telegram-btn" href="https://t.me/proluton" target="_blank">
       <svg viewBox="0 0 24 24"><path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.894 8.221-1.97 9.28c-.145.658-.537.818-1.084.508l-3-2.21-1.447 1.394c-.16.16-.295.295-.605.295l.213-3.053 5.56-5.023c.242-.213-.054-.333-.373-.12L8.32 13.617l-2.96-.924c-.643-.204-.657-.643.136-.953l11.57-4.461c.537-.194 1.006.131.828.942z"/></svg>
-      📢 通知频道
+      📢 Announcement Channel
     </a>
   </div>
 </header>
@@ -353,233 +358,225 @@
 
   <!-- ═══════════════════════ BUYING PROCESS ═══════════════════════ -->
   <details class="info-accordion" open>
-    <summary>📦 购买流程 &amp; 运费说明</summary>
+    <summary>📦 Ordering Process &amp; Shipping Info</summary>
     <div class="accordion-body">
       <div class="flow-grid">
         <div class="flow-card">
-          <h4>🇨🇳 国内购买流程</h4>
+          <h4>Order Process:</h4>
           <ol>
-            <li>联系 Telegram 客服</li>
-            <li>告知所需药品及数量</li>
-            <li>确认价格及付款方式</li>
-            <li>付款（USDT 或支付宝）</li>
-            <li>提供收货地址</li>
-            <li>等待发货，跟踪物流</li>
-          </ol>
-        </div>
-        <div class="flow-card">
-          <h4>🌏 国际购买流程</h4>
-          <ol>
-            <li>联系 Telegram 客服</li>
-            <li>确认目标国家及药品</li>
-            <li>客服报价（含运费）</li>
-            <li>付款（USDT 或支付宝）</li>
-            <li>提供收货地址</li>
-            <li>空运发出，追踪物流</li>
+            <li>Contact our support team via Telegram or email</li>
+            <li>Confirm destination address and product requirements</li>
+            <li>Receive a proforma invoice for your order</li>
+            <li>Complete payment via T/T (bank transfer) or USDT</li>
+            <li>Order is shipped, and tracking information will be provided</li>
+            <li>Receive your shipment</li>
           </ol>
         </div>
       </div>
 
       <table class="shipping-table">
         <thead>
-          <tr><th>目的地</th><th>参考运费（CNY）</th></tr>
+          <tr><th>Destination</th><th>Estimated Shipping (CNY)</th></tr>
         </thead>
         <tbody>
-          <tr><td>中国境内转运仓</td><td>¥10</td></tr>
-          <tr><td>澳门 / 台湾</td><td>¥75</td></tr>
-          <tr><td>马来西亚 / 新加坡</td><td>¥100</td></tr>
-          <tr><td>韩国 / 日本</td><td>¥180</td></tr>
-          <tr><td>欧洲大部分国家</td><td>¥240</td></tr>
-          <tr><td>美国 / 加拿大 / 澳大利亚</td><td>¥280</td></tr>
-          <tr><td>其他国家</td><td>联系客服报价</td></tr>
+          <tr><td>China domestic forwarding warehouse</td><td>¥10</td></tr>
+          <tr><td>Macau / Taiwan</td><td>¥75</td></tr>
+          <tr><td>Thailand / Indonesia / Vietnam</td><td>¥180</td></tr>
+          <tr><td>Malaysia / Singapore</td><td>¥220</td></tr>
+          <tr><td>South Korea / Japan</td><td>¥180</td></tr>
+          <tr><td>Most European countries</td><td>¥240</td></tr>
+          <tr><td>United States / Canada / Australia / New Zealand (FCA)</td><td>¥280</td></tr>
+          <tr><td>Other countries</td><td>Please contact support for a quotation</td></tr>
         </tbody>
       </table>
 
       <div class="notice">
-        ⚠️ 运费以实际重量和内容物为准，以上为估算参考。<br>
-        付款方式：<strong>USDT 或支付宝</strong>。所有货物按 FCA（货交承运人）条款发出，交付承运人后责任终止。
+        <strong>Notes &amp; Terms:</strong><br><br>
+        Shipping costs are estimates and may vary depending on actual weight and contents.<br><br>
+        Payment is accepted via <strong>USDT or T/T (bank transfer)</strong>.<br><br>
+        We can assist with customs clearance for most destinations. Shipments to the United States, Canada, Australia, and New Zealand are handled under FCA terms, with responsibility transferring to the buyer once goods are handed over to the carrier.
       </div>
     </div>
   </details>
 
-  <!-- ═══════════════════════ 抗雄激素药物 ═══════════════════════ -->
+  <!-- ═══════════════════════ Antiandrogen Medications ═══════════════════════ -->
   <details class="category cat-anti" open>
     <summary>
       <div class="cat-icon">🛡️</div>
       <div class="cat-meta">
-        抗雄激素药物
-        <span>Antiandrogens · 7 种产品</span>
+        Antiandrogen Medications
+        <span>Antiandrogens · 7 products</span>
       </div>
       <span class="chevron">▾</span>
     </summary>
 
     <div class="product-grid">
 
-      <!-- 100土色 -->
+      <!-- 100 Tan Box -->
       <div class="card">
         <div class="card-img-wrap">
-          <img src="images/100土色.jpg" alt="100土色 醋酸环丙孕酮 100mg">
+          <img src="images/100 Tan Box.jpg" alt="Cyproterone Acetate 100mg (Tan Box)">
         </div>
         <div class="card-body">
-          <div class="card-name">100土色</div>
-          <div class="card-ingredient">醋酸环丙孕酮 Cyproterone Acetate</div>
+          <div class="card-name">100 Tan Box</div>
+          <div class="card-ingredient">Cyproterone Acetate</div>
           <div class="badges">
-            <span class="badge badge-dose">100mg / 片</span>
-            <span class="badge badge-form">口服</span>
-            <span class="badge badge-origin">欧洲产</span>
+            <span class="badge badge-dose">100mg / tablet</span>
+            <span class="badge badge-form">Oral</span>
+            <span class="badge badge-origin">Made in Europe</span>
           </div>
           <p class="card-desc">
-            一盒 3 板，每板 10 片，共 30 片。<br>
-            <strong>推荐用量：</strong>12.5mg / 天（¼ 片）。<br>
-            醋酸环丙孕酮（色谱酮）是 MTF HRT 最常用的抗雄药物，通过竞争性阻断雄激素受体并抑制促性腺激素分泌，有效降低体内睾酮水平。欧洲原产，品质稳定。
+            1 box contains 3 blisters, 10 tablets each (30 tablets total).<br>
+            <strong>Recommended dose:</strong> 12.5mg/day (¼ tablet).<br>
+            Cyproterone acetate is one of the most commonly used antiandrogens in MTF HRT. It competitively blocks androgen receptors and suppresses gonadotropin secretion to effectively lower testosterone levels. European origin with stable quality.
           </p>
         </div>
         <div class="card-footer">
-          <a class="buy-btn" href="https://t.me/Kanna_Pharmacy" target="_blank">💬 联系购买</a>
+          <a class="buy-btn" href="https://t.me/Kanna_Pharmacy" target="_blank">💬 Contact to Buy</a>
         </div>
       </div>
 
-      <!-- 100新色 -->
+      <!-- 100 NZ Box -->
       <div class="card">
         <div class="card-img-wrap">
-          <img src="images/100新色.jpg" alt="100新色 醋酸环丙孕酮 100mg 新西兰">
+          <img src="images/100 NZ Box.jpg" alt="Cyproterone Acetate 100mg (New Zealand)">
         </div>
         <div class="card-body">
-          <div class="card-name">100新色</div>
-          <div class="card-ingredient">醋酸环丙孕酮 Cyproterone Acetate</div>
+          <div class="card-name">100 NZ Box</div>
+          <div class="card-ingredient">Cyproterone Acetate</div>
           <div class="badges">
-            <span class="badge badge-dose">100mg / 片</span>
-            <span class="badge badge-form">口服</span>
-            <span class="badge badge-origin">新西兰产</span>
+            <span class="badge badge-dose">100mg / tablet</span>
+            <span class="badge badge-form">Oral</span>
+            <span class="badge badge-origin">Made in New Zealand</span>
           </div>
           <p class="card-desc">
-            一盒 5 板，每板 10 片，共 50 片。<br>
-            <strong>推荐用量：</strong>12.5mg / 天（¼ 片）。<br>
-            新西兰原产版本，大规格包装更经济实惠。同样含醋酸环丙孕酮，适合长期使用或囤货需求。
+            1 box contains 5 blisters, 10 tablets each (50 tablets total).<br>
+            <strong>Recommended dose:</strong> 12.5mg/day (¼ tablet).<br>
+            New Zealand origin version with a larger and more economical package size. Contains the same cyproterone acetate, suitable for long-term use or stocking up.
           </p>
         </div>
         <div class="card-footer">
-          <a class="buy-btn" href="https://t.me/Kanna_Pharmacy" target="_blank">💬 联系购买</a>
+          <a class="buy-btn" href="https://t.me/Kanna_Pharmacy" target="_blank">💬 Contact to Buy</a>
         </div>
       </div>
 
-      <!-- 土色 -->
+      <!-- Tan Box -->
       <div class="card">
         <div class="card-img-wrap">
-          <img src="images/土色.jpg" alt="土色 醋酸环丙孕酮 100mg">
+          <img src="images/Tan Box.jpg" alt="Cyproterone Acetate 100mg (Tan)">
         </div>
         <div class="card-body">
-          <div class="card-name">土色</div>
-          <div class="card-ingredient">醋酸环丙孕酮 Cyproterone Acetate</div>
+          <div class="card-name">Tan Box</div>
+          <div class="card-ingredient">Cyproterone Acetate</div>
           <div class="badges">
-            <span class="badge badge-dose">100mg / 片</span>
-            <span class="badge badge-form">口服</span>
-            <span class="badge badge-origin">欧洲产</span>
+            <span class="badge badge-dose">100mg / tablet</span>
+            <span class="badge badge-form">Oral</span>
+            <span class="badge badge-origin">Made in Europe</span>
           </div>
           <p class="card-desc">
-            一盒 3 板，每板 10 片，共 30 片。<br>
-            <strong>推荐用量：</strong>12.5mg / 天（¼ 片）。<br>
-            欧洲进口，旧版包装，成分与 100土色 相同。价格较亲民，效果等同。
+            1 box contains 3 blisters, 10 tablets each (30 tablets total).<br>
+            <strong>Recommended dose:</strong> 12.5mg/day (¼ tablet).<br>
+            European import in older packaging, same ingredients as 100 Tan Box. More budget-friendly with equivalent effects.
           </p>
         </div>
         <div class="card-footer">
-          <a class="buy-btn" href="https://t.me/Kanna_Pharmacy" target="_blank">💬 联系购买</a>
+          <a class="buy-btn" href="https://t.me/Kanna_Pharmacy" target="_blank">💬 Contact to Buy</a>
         </div>
       </div>
 
-      <!-- 新色 -->
+      <!-- NZ Box -->
       <div class="card">
         <div class="card-img-wrap">
-          <img src="images/新色.jpg" alt="新色 醋酸环丙孕酮 50mg 新西兰">
+          <img src="images/新色.jpg" alt="Cyproterone Acetate 50mg (New Zealand)">
         </div>
         <div class="card-body">
-          <div class="card-name">新色（50mg）</div>
-          <div class="card-ingredient">醋酸环丙孕酮 Cyproterone Acetate</div>
+          <div class="card-name">NZ Box (50mg)</div>
+          <div class="card-ingredient">Cyproterone Acetate</div>
           <div class="badges">
-            <span class="badge badge-dose">50mg / 片</span>
-            <span class="badge badge-form">口服</span>
-            <span class="badge badge-origin">新西兰产</span>
+            <span class="badge badge-dose">50mg / tablet</span>
+            <span class="badge badge-form">Oral</span>
+            <span class="badge badge-origin">Made in New Zealand</span>
           </div>
           <p class="card-desc">
-            一盒 5 板，每板 10 片，共 50 片。<br>
-            <strong>推荐用量：</strong>12.5mg / 天（¼ 片），分割方便。<br>
-            50mg 规格更便于准确分割剂量，对初用或低剂量方案尤为友好。
+            1 box contains 5 blisters, 10 tablets each (50 tablets total).<br>
+            <strong>Recommended dose:</strong> 12.5mg/day (¼ tablet), easy to split.<br>
+            The 50mg strength is easier for precise dose splitting, especially suitable for beginners or low-dose regimens.
           </p>
         </div>
         <div class="card-footer">
-          <a class="buy-btn" href="https://t.me/Kanna_Pharmacy" target="_blank">💬 联系购买</a>
+          <a class="buy-btn" href="https://t.me/Kanna_Pharmacy" target="_blank">💬 Contact to Buy</a>
         </div>
       </div>
 
-      <!-- 色针 -->
+      <!-- Cypro Injection -->
       <div class="card">
         <div class="card-img-wrap">
-          <img src="images/色针.jpg" alt="色针 醋酸环丙孕酮注射液 300mg 拜耳">
+          <img src="images/色针.jpg" alt="Cyproterone Acetate Injection 300mg (Bayer)">
         </div>
         <div class="card-body">
-          <div class="card-name">色针（注射）</div>
-          <div class="card-ingredient">醋酸环丙孕酮 注射液</div>
+          <div class="card-name">Cypro Shot (Injection)</div>
+          <div class="card-ingredient">Cyproterone Acetate Injection</div>
           <div class="badges">
-            <span class="badge badge-dose">300mg / 支</span>
-            <span class="badge badge-form">肌肉注射</span>
-            <span class="badge badge-special">长效 · 月注射</span>
+            <span class="badge badge-dose">300mg / ampoule</span>
+            <span class="badge badge-form">Intramuscular injection</span>
+            <span class="badge badge-special">Long-acting · Monthly injection</span>
           </div>
           <p class="card-desc">
-            一盒一支，3ml/支，含 300mg 醋酸环丙孕酮。<br>
-            <strong>生产商：拜耳（Bayer）</strong>。<br>
-            长效注射剂型，一般每月注射一次，免去每日口服的麻烦，血药浓度更稳定。适合依从性要求高或口服效果不稳定的用户。
+            1 box includes 1 ampoule, 3ml/ampoule, containing 300mg cyproterone acetate.<br>
+            <strong>Manufacturer: Bayer</strong>.<br>
+            Long-acting injectable form, generally once per month, avoiding daily oral dosing with more stable blood levels. Suitable for users needing high adherence or who have unstable response to oral forms.
           </p>
         </div>
         <div class="card-footer">
-          <a class="buy-btn" href="https://t.me/Kanna_Pharmacy" target="_blank">💬 联系购买</a>
+          <a class="buy-btn" href="https://t.me/Kanna_Pharmacy" target="_blank">💬 Contact to Buy</a>
         </div>
       </div>
 
-      <!-- 日本比卡 -->
+      <!-- Japan Bica -->
       <div class="card">
         <div class="card-img-wrap">
-          <img src="images/日本比卡.jpg" alt="日本比卡 比卡鲁胺 80mg 日本">
+          <img src="images/Japan Bica.jpg" alt="Bicalutamide 80mg (Japan)">
         </div>
         <div class="card-body">
-          <div class="card-name">日本比卡</div>
-          <div class="card-ingredient">比卡鲁胺 Bicalutamide</div>
+          <div class="card-name">Japan Bica</div>
+          <div class="card-ingredient">Bicalutamide</div>
           <div class="badges">
-            <span class="badge badge-dose">80mg / 片</span>
-            <span class="badge badge-form">口服</span>
-            <span class="badge badge-origin">日本产</span>
+            <span class="badge badge-dose">80mg / tablet</span>
+            <span class="badge badge-form">Oral</span>
+            <span class="badge badge-origin">Made in Japan</span>
           </div>
           <p class="card-desc">
-            一盒 100 片，每片 80mg。<br>
-            <strong>推荐用量：</strong>25～50mg / 天，可对半切服用。<br>
-            比卡鲁胺是纯雄激素受体拮抗剂，不抑制睾酮分泌，而是在受体层面阻断雄激素作用，适合与雌激素联用或单药启动。日本产品质可靠，大装量性价比高。
+            1 box contains 100 tablets, 80mg each.<br>
+            <strong>Recommended dose:</strong> 25–50mg/day; tablets can be split in half.<br>
+            Bicalutamide is a pure androgen receptor antagonist. It does not suppress testosterone production, but blocks androgen action at the receptor level. Suitable for combination with estrogen or monotherapy initiation. Japanese quality is reliable with good value in large packs.
           </p>
         </div>
         <div class="card-footer">
-          <a class="buy-btn" href="https://t.me/Kanna_Pharmacy" target="_blank">💬 联系购买</a>
+          <a class="buy-btn" href="https://t.me/Kanna_Pharmacy" target="_blank">💬 Contact to Buy</a>
         </div>
       </div>
 
-      <!-- 新比卡 -->
+      <!-- NZ Bica -->
       <div class="card">
         <div class="card-img-wrap">
-          <img src="images/新比卡.jpg" alt="新比卡 比卡鲁胺 50mg 新西兰">
+          <img src="images/NZ Bica.jpg" alt="Bicalutamide 50mg (New Zealand)">
         </div>
         <div class="card-body">
-          <div class="card-name">新比卡</div>
-          <div class="card-ingredient">比卡鲁胺 Bicalutamide</div>
+          <div class="card-name">NZ Bica</div>
+          <div class="card-ingredient">Bicalutamide</div>
           <div class="badges">
-            <span class="badge badge-dose">50mg / 片</span>
-            <span class="badge badge-form">口服</span>
-            <span class="badge badge-origin">新西兰产</span>
+            <span class="badge badge-dose">50mg / tablet</span>
+            <span class="badge badge-form">Oral</span>
+            <span class="badge badge-origin">Made in New Zealand</span>
           </div>
           <p class="card-desc">
-            一盒 28 片，每片 50mg。<br>
-            <strong>推荐用量：</strong>50mg / 天，一片一次。<br>
-            新西兰原产比卡鲁胺，标准 50mg 规格，剂量精准无需分割。适合用量明确的稳定期用户。
+            1 box contains 28 tablets, 50mg each.<br>
+            <strong>Recommended dose:</strong> 50mg/day, one tablet once daily.<br>
+            New Zealand origin bicalutamide in standard 50mg strength, precise dosing without splitting. Suitable for stable-phase users with a fixed dose plan.
           </p>
         </div>
         <div class="card-footer">
-          <a class="buy-btn" href="https://t.me/Kanna_Pharmacy" target="_blank">💬 联系购买</a>
+          <a class="buy-btn" href="https://t.me/Kanna_Pharmacy" target="_blank">💬 Contact to Buy</a>
         </div>
       </div>
 
@@ -587,207 +584,207 @@
   </details>
 
 
-  <!-- ═══════════════════════ 雌激素类药物 ═══════════════════════ -->
+  <!-- ═══════════════════════ Estrogen Medications ═══════════════════════ -->
   <details class="category cat-estro" open>
     <summary>
       <div class="cat-icon">🌸</div>
       <div class="cat-meta">
-        雌激素类药物
-        <span>Estrogens · 8 种产品</span>
+        Estrogen Medications
+        <span>Estrogens · 8 products</span>
       </div>
       <span class="chevron">▾</span>
     </summary>
 
     <div class="product-grid">
 
-      <!-- 苯雌 -->
+      <!-- Benzo Estradiol -->
       <div class="card">
         <div class="card-img-wrap">
-          <img src="images/苯雌.jpg" alt="苯雌 苯甲酸雌二醇注射液 5mg 泰国">
+          <img src="images/苯雌.jpg" alt="Estradiol Benzoate Injection 5mg (Thailand)">
         </div>
         <div class="card-body">
-          <div class="card-name">苯雌（注射）</div>
-          <div class="card-ingredient">苯甲酸雌二醇 Estradiol Benzoate</div>
+          <div class="card-name">Benzo Estradiol (Injection)</div>
+          <div class="card-ingredient">Estradiol Benzoate</div>
           <div class="badges">
-            <span class="badge badge-dose">5mg / 支</span>
-            <span class="badge badge-form">肌肉注射</span>
-            <span class="badge badge-origin">泰国产</span>
+            <span class="badge badge-dose">5mg / ampoule</span>
+            <span class="badge badge-form">Intramuscular injection</span>
+            <span class="badge badge-origin">Made in Thailand</span>
           </div>
           <p class="card-desc">
-            一盒 10 支，每支 1ml，含 5mg 苯甲酸雌二醇。<br>
-            <strong>推荐频率：</strong>每 3～5 天一针。<br>
-            苯甲酸雌二醇为短效注射型雌激素，避开肝脏首过效应，生物利用度高，血药浓度峰值明显。适合需要精确控制雌激素水平的用户。泰国正规药厂生产。
+            1 box contains 10 ampoules, 1ml each, with 5mg estradiol benzoate per ampoule.<br>
+            <strong>Recommended frequency:</strong> one injection every 3–5 days.<br>
+            Estradiol benzoate is a short-acting injectable estrogen that bypasses first-pass liver metabolism, offers high bioavailability, and produces clear peak levels. Suitable for users who need precise estrogen level control. Produced by a licensed Thai manufacturer.
           </p>
         </div>
         <div class="card-footer">
-          <a class="buy-btn" href="https://t.me/Kanna_Pharmacy" target="_blank">💬 联系购买</a>
+          <a class="buy-btn" href="https://t.me/Kanna_Pharmacy" target="_blank">💬 Contact to Buy</a>
         </div>
       </div>
 
-      <!-- 凝胶新 -->
+      <!-- New Gel -->
       <div class="card">
         <div class="card-img-wrap">
-          <img src="images/凝胶新.jpg" alt="凝胶新 雌二醇凝胶 泰国">
+          <img src="images/凝胶新.jpg" alt="Estradiol Gel (New, Thailand)">
         </div>
         <div class="card-body">
-          <div class="card-name">凝胶新（雌二醇凝胶）</div>
-          <div class="card-ingredient">雌二醇 Estradiol 经皮凝胶</div>
+          <div class="card-name">New Gel (Estradiol Gel)</div>
+          <div class="card-ingredient">Estradiol Transdermal Gel</div>
           <div class="badges">
-            <span class="badge badge-dose">48mg / 盒</span>
-            <span class="badge badge-form">经皮涂抹</span>
-            <span class="badge badge-origin">泰国产</span>
+            <span class="badge badge-dose">48mg / box</span>
+            <span class="badge badge-form">Transdermal topical</span>
+            <span class="badge badge-origin">Made in Thailand</span>
           </div>
           <p class="card-desc">
-            一盒 80g，含 48mg 雌二醇（0.6mg/g），附量尺。<br>
-            <strong>推荐用量：</strong>每日 1 量尺（2.5g），涂抹大腿内侧或手臂内侧。<br>
-            ⚠️ <strong>请勿涂抹胸部。</strong><br>
-            经皮给药绕过肝脏，雌二醇直接入血，对肝脏友好，且激素水平波动较平稳。适合不愿注射的用户。
+            1 box contains 80g gel with 48mg estradiol (0.6mg/g), with dosing ruler included.<br>
+            <strong>Recommended dose:</strong> 1 ruler measure daily (2.5g), apply to inner thigh or inner arm.<br>
+            ⚠️ <strong>Do not apply to the chest.</strong><br>
+            Transdermal delivery bypasses the liver, allowing estradiol to enter circulation directly. It is liver-friendly and provides steadier hormone levels. Suitable for users who prefer not to inject.
           </p>
         </div>
         <div class="card-footer">
-          <a class="buy-btn" href="https://t.me/Kanna_Pharmacy" target="_blank">💬 联系购买</a>
+          <a class="buy-btn" href="https://t.me/Kanna_Pharmacy" target="_blank">💬 Contact to Buy</a>
         </div>
       </div>
 
-      <!-- 诺 -->
+      <!-- Nuo -->
       <div class="card">
         <div class="card-img-wrap">
-          <img src="images/诺.jpg" alt="诺 雌二醇 2mg 泰国">
+          <img src="images/诺.jpg" alt="Estradiol 2mg (Thailand)">
         </div>
         <div class="card-body">
-          <div class="card-name">诺（雌二醇片）</div>
-          <div class="card-ingredient">雌二醇 Estradiol</div>
+          <div class="card-name">Nuo (Estradiol Tablets)</div>
+          <div class="card-ingredient">Estradiol</div>
           <div class="badges">
-            <span class="badge badge-dose">2mg / 片</span>
-            <span class="badge badge-form">口服</span>
-            <span class="badge badge-origin">泰国产</span>
+            <span class="badge badge-dose">2mg / tablet</span>
+            <span class="badge badge-form">Oral</span>
+            <span class="badge badge-origin">Made in Thailand</span>
           </div>
           <p class="card-desc">
-            一盒一板，共 28 片，每片 2mg。<br>
-            <strong>推荐用量：</strong>2～6mg / 天，视个人情况而定。<br>
-            天然雌二醇片，活性成分与体内雌激素一致，代谢后产生雌酮和雌三醇。口服方便，是最常用的 HRT 雌激素剂型之一。
+            1 box includes 1 blister with 28 tablets, 2mg each.<br>
+            <strong>Recommended dose:</strong> 2–6mg/day, depending on individual needs.<br>
+            Natural estradiol tablets with active ingredients identical to endogenous estrogen. Metabolized into estrone and estriol. Convenient oral use and one of the most common HRT estrogen forms.
           </p>
         </div>
         <div class="card-footer">
-          <a class="buy-btn" href="https://t.me/Kanna_Pharmacy" target="_blank">💬 联系购买</a>
+          <a class="buy-btn" href="https://t.me/Kanna_Pharmacy" target="_blank">💬 Contact to Buy</a>
         </div>
       </div>
 
-      <!-- 日本贴片 -->
+      <!-- Japan Patch -->
       <div class="card">
         <div class="card-img-wrap">
-          <img src="images/日本贴片.jpg" alt="日本贴片 雌二醇贴片 0.72mg 日本">
+          <img src="images/Japan Patch.jpg" alt="Estradiol Patch 0.72mg (Japan)">
         </div>
         <div class="card-body">
-          <div class="card-name">日本贴片</div>
-          <div class="card-ingredient">雌二醇 Estradiol 经皮贴片</div>
+          <div class="card-name">Japan Patch</div>
+          <div class="card-ingredient">Estradiol Transdermal Patch</div>
           <div class="badges">
-            <span class="badge badge-dose">0.72mg / 片</span>
-            <span class="badge badge-form">经皮贴片</span>
-            <span class="badge badge-origin">日本产</span>
+            <span class="badge badge-dose">0.72mg / tablet</span>
+            <span class="badge badge-form">Transdermal patch</span>
+            <span class="badge badge-origin">Made in Japan</span>
           </div>
           <p class="card-desc">
-            一盒 70 片，每片含 0.72mg 雌二醇。<br>
-            <strong>推荐用法：</strong>每两天更换一片，贴于下腹部或臀部。<br>
-            日本进口贴片，缓释技术成熟，雌激素平稳释放 48 小时，血药浓度波动极小，是经皮给药中体验最稳定的方式之一。
+            1 box contains 70 patches, each with 0.72mg estradiol.<br>
+            <strong>Recommended use:</strong> replace one patch every two days, apply to lower abdomen or buttocks.<br>
+            Imported Japanese patch with mature sustained-release technology. Estrogen is released steadily for 48 hours with minimal blood-level fluctuation, making it one of the most stable transdermal options.
           </p>
         </div>
         <div class="card-footer">
-          <a class="buy-btn" href="https://t.me/Kanna_Pharmacy" target="_blank">💬 联系购买</a>
+          <a class="buy-btn" href="https://t.me/Kanna_Pharmacy" target="_blank">💬 Contact to Buy</a>
         </div>
       </div>
 
-      <!-- 日雌 -->
+      <!-- Japan Estradiol -->
       <div class="card">
         <div class="card-img-wrap">
-          <img src="images/日雌.jpg" alt="日雌 戊酸雌二醇注射液 10mg 日本">
+          <img src="images/日雌.jpg" alt="Estradiol Valerate Injection 10mg (Japan)">
         </div>
         <div class="card-body">
-          <div class="card-name">日雌（戊酸雌二醇注射）</div>
-          <div class="card-ingredient">戊酸雌二醇 Estradiol Valerate 注射液</div>
+          <div class="card-name">Japan Estradiol (Valerate Injection)</div>
+          <div class="card-ingredient">Estradiol Valerate Injection</div>
           <div class="badges">
-            <span class="badge badge-dose">10mg / 支</span>
-            <span class="badge badge-form">肌肉注射</span>
-            <span class="badge badge-origin">日本产</span>
+            <span class="badge badge-dose">10mg / ampoule</span>
+            <span class="badge badge-form">Intramuscular injection</span>
+            <span class="badge badge-origin">Made in Japan</span>
           </div>
           <p class="card-desc">
-            一盒 10 支，每支 1ml，含 10mg 戊酸雌二醇。<br>
-            <strong>推荐频率：</strong>1～2 周一针。<br>
-            戊酸雌二醇进入体内水解释放雌二醇，为长效酯化型雌激素。肌肉注射后缓慢吸收，峰谷差适中，是注射雌激素中最经典的选择，日本产品质量有保障。
+            1 box contains 10 ampoules, 1ml each, with 10mg estradiol valerate per ampoule.<br>
+            <strong>Recommended frequency:</strong> one injection every 1–2 weeks.<br>
+            Estradiol valerate is hydrolyzed in the body to release estradiol; it is a long-acting esterified estrogen. After intramuscular injection it is absorbed gradually with moderate peak-trough differences, making it a classic injectable estrogen option. Japanese quality is dependable.
           </p>
         </div>
         <div class="card-footer">
-          <a class="buy-btn" href="https://t.me/Kanna_Pharmacy" target="_blank">💬 联系购买</a>
+          <a class="buy-btn" href="https://t.me/Kanna_Pharmacy" target="_blank">💬 Contact to Buy</a>
         </div>
       </div>
 
-      <!-- 泰补 -->
+      <!-- Thai Valerate -->
       <div class="card">
         <div class="card-img-wrap">
-          <img src="images/泰补.jpg" alt="泰补 戊酸雌二醇 2mg 泰国">
+          <img src="images/Thai Valerate.jpg" alt="Estradiol Valerate 2mg (Thailand)">
         </div>
         <div class="card-body">
-          <div class="card-name">泰补</div>
-          <div class="card-ingredient">戊酸雌二醇 Estradiol Valerate</div>
+          <div class="card-name">Thai Valerate</div>
+          <div class="card-ingredient">Estradiol Valerate</div>
           <div class="badges">
-            <span class="badge badge-dose">2mg / 片</span>
-            <span class="badge badge-form">口服</span>
-            <span class="badge badge-origin">泰国产</span>
+            <span class="badge badge-dose">2mg / tablet</span>
+            <span class="badge badge-form">Oral</span>
+            <span class="badge badge-origin">Made in Thailand</span>
           </div>
           <p class="card-desc">
-            一盒 3 板，每板 28 片，共 84 片，每片 2mg。<br>
-            <strong>推荐用量：</strong>2～6mg / 天，视个人情况而定。<br>
-            戊酸雌二醇口服后在体内水解为雌二醇，是最常见的口服雌激素之一。泰国生产，价格亲民，大装量适合长期服用。
+            1 box contains 3 blisters, 28 tablets each (84 tablets total), 2mg per tablet.<br>
+            <strong>Recommended dose:</strong> 2–6mg/day, depending on individual needs.<br>
+            Oral estradiol valerate is hydrolyzed into estradiol in the body. It is one of the most common oral estrogens. Thai-made, affordable, and available in large packs for long-term use.
           </p>
         </div>
         <div class="card-footer">
-          <a class="buy-btn" href="https://t.me/Kanna_Pharmacy" target="_blank">💬 联系购买</a>
+          <a class="buy-btn" href="https://t.me/Kanna_Pharmacy" target="_blank">💬 Contact to Buy</a>
         </div>
       </div>
 
-      <!-- 新补 -->
+      <!-- NZ Valerate -->
       <div class="card">
         <div class="card-img-wrap">
-          <img src="images/新补.jpg" alt="新补 戊酸雌二醇 2mg 新西兰">
+          <img src="images/NZ Valerate.jpg" alt="Estradiol Valerate 2mg (New Zealand)">
         </div>
         <div class="card-body">
-          <div class="card-name">新补</div>
-          <div class="card-ingredient">戊酸雌二醇 Estradiol Valerate</div>
+          <div class="card-name">NZ Valerate</div>
+          <div class="card-ingredient">Estradiol Valerate</div>
           <div class="badges">
-            <span class="badge badge-dose">2mg / 片</span>
-            <span class="badge badge-form">口服</span>
-            <span class="badge badge-origin">新西兰产</span>
+            <span class="badge badge-dose">2mg / tablet</span>
+            <span class="badge badge-form">Oral</span>
+            <span class="badge badge-origin">Made in New Zealand</span>
           </div>
           <p class="card-desc">
-            一盒 3 板，每板 28 片，共 84 片，每片 2mg。<br>
-            <strong>推荐用量：</strong>2～6mg / 天，视个人情况而定。<br>
-            新西兰进口版本的戊酸雌二醇，与泰补成分相同，新西兰制药标准较高，适合对品质有要求的用户。
+            1 box contains 3 blisters, 28 tablets each (84 tablets total), 2mg per tablet.<br>
+            <strong>Recommended dose:</strong> 2–6mg/day, depending on individual needs.<br>
+            New Zealand import version of estradiol valerate, with the same ingredients as Thai Valerate. Manufactured to high New Zealand pharmaceutical standards, suitable for users with stricter quality preferences.
           </p>
         </div>
         <div class="card-footer">
-          <a class="buy-btn" href="https://t.me/Kanna_Pharmacy" target="_blank">💬 联系购买</a>
+          <a class="buy-btn" href="https://t.me/Kanna_Pharmacy" target="_blank">💬 Contact to Buy</a>
         </div>
       </div>
 
-      <!-- 伊迪蒙 -->
+      <!-- Yidimeng -->
       <div class="card">
         <div class="card-img-wrap">
-          <img src="images/伊迪蒙.jpg" alt="伊迪蒙 结合雌激素 0.625mg">
+          <img src="images/伊迪蒙.jpg" alt="Premarin Conjugated Estrogens 0.625mg">
         </div>
         <div class="card-body">
-          <div class="card-name">伊迪蒙（Premarin）</div>
-          <div class="card-ingredient">结合雌激素 Conjugated Estrogens</div>
+          <div class="card-name">Yidimeng (Premarin)</div>
+          <div class="card-ingredient">Conjugated Estrogens</div>
           <div class="badges">
-            <span class="badge badge-dose">0.625mg / 粒</span>
-            <span class="badge badge-form">口服</span>
+            <span class="badge badge-dose">0.625mg / tablet</span>
+            <span class="badge badge-form">Oral</span>
           </div>
           <p class="card-desc">
-            一盒 100 粒，每粒含 0.625mg 结合雌激素。<br>
-            结合雌激素（Premarin）由多种雌激素成分混合而成，是较传统的 HRT 用药，适合口服雌激素初用者参考或特定需求用户。因成分复杂，相比单一雌二醇制剂监测指标需更全面。
+            1 box contains 100 tablets, 0.625mg conjugated estrogens each.<br>
+            Conjugated estrogens (Premarin) are a mixture of multiple estrogen components. This is a more traditional HRT medication, suitable for oral-estrogen beginners as reference or users with specific needs. Due to its complex composition, monitoring should be more comprehensive than with single-ingredient estradiol products.
           </p>
         </div>
         <div class="card-footer">
-          <a class="buy-btn" href="https://t.me/Kanna_Pharmacy" target="_blank">💬 联系购买</a>
+          <a class="buy-btn" href="https://t.me/Kanna_Pharmacy" target="_blank">💬 Contact to Buy</a>
         </div>
       </div>
 
@@ -795,13 +792,13 @@
   </details>
 
 
-  <!-- ═══════════════════════ 其他 ═══════════════════════ -->
+  <!-- ═══════════════════════ OTHERS ═══════════════════════ -->
   <details class="category cat-other">
     <summary>
       <div class="cat-icon">💊</div>
       <div class="cat-meta">
-        其他药品
-        <span>Others · 2 种产品</span>
+        Other Medications
+        <span>Others · 2 products</span>
       </div>
       <span class="chevron">▾</span>
     </summary>
@@ -811,47 +808,47 @@
       <!-- Dayvigo -->
       <div class="card">
         <div class="card-img-wrap">
-          <img src="images/dayvigo.jpg" alt="Dayvigo 来博雷生 5mg">
+          <img src="images/dayvigo.jpg" alt="Dayvigo Lemborexant 5mg">
         </div>
         <div class="card-body">
-          <div class="card-name">Dayvigo（来博雷生）</div>
-          <div class="card-ingredient">来博雷生 Lemborexant</div>
+          <div class="card-name">Dayvigo (Lemborexant)</div>
+          <div class="card-ingredient">Lemborexant</div>
           <div class="badges">
-            <span class="badge badge-dose">5mg / 片</span>
-            <span class="badge badge-form">口服</span>
-            <span class="badge badge-special">非管制 · 助眠</span>
+            <span class="badge badge-dose">5mg / tablet</span>
+            <span class="badge badge-form">Oral</span>
+            <span class="badge badge-special">Non-controlled · Sleep aid</span>
           </div>
           <p class="card-desc">
-            规格：5mg × 100 片。<br>
-            Dayvigo 是新一代食欲素受体拮抗剂（OX1R / OX2R），通过阻断促进觉醒的食欲素通路帮助入睡并维持睡眠。<br>
-            与传统苯二氮䓬类镇静药相比，<strong>不影响正常睡眠结构</strong>，成瘾风险极低，属<strong>非管制药品</strong>。适合因激素变化引起睡眠障碍的用户。
+            Specification: 5mg × 100 tablets.<br>
+            Dayvigo is a next-generation orexin receptor antagonist (OX1R / OX2R) that helps initiate and maintain sleep by blocking wake-promoting orexin pathways.<br>
+            Compared with traditional benzodiazepine sedatives, it <strong>does not disrupt normal sleep architecture</strong>, has very low dependence risk, and is a <strong>non-controlled medication</strong>. Suitable for users with sleep disturbances caused by hormone changes.
           </p>
         </div>
         <div class="card-footer">
-          <a class="buy-btn" href="https://t.me/Kanna_Pharmacy" target="_blank">💬 联系购买</a>
+          <a class="buy-btn" href="https://t.me/Kanna_Pharmacy" target="_blank">💬 Contact to Buy</a>
         </div>
       </div>
 
-      <!-- 睾酮 -->
+      <!-- Testosterone -->
       <div class="card">
         <div class="card-img-wrap">
-          <img src="images/睾酮.jpg" alt="睾酮 庚酸睾酮注射液 250mg 德国">
+          <img src="images/睾酮.jpg" alt="Testosterone Enanthate Injection 250mg (Germany)">
         </div>
         <div class="card-body">
-          <div class="card-name">睾酮（庚酸睾酮注射）</div>
-          <div class="card-ingredient">庚酸睾酮 Testosterone Enanthate</div>
+          <div class="card-name">Testosterone (Enanthate Injection)</div>
+          <div class="card-ingredient">Testosterone Enanthate</div>
           <div class="badges">
-            <span class="badge badge-dose">250mg / 支</span>
-            <span class="badge badge-form">肌肉注射</span>
-            <span class="badge badge-origin">德国产</span>
+            <span class="badge badge-dose">250mg / ampoule</span>
+            <span class="badge badge-form">Intramuscular injection</span>
+            <span class="badge badge-origin">Made in Germany</span>
           </div>
           <p class="card-desc">
-            一盒一支，每支 1ml，含 250mg 庚酸睾酮。<br>
-            庚酸睾酮为长效酯化睾酮，肌肉注射后缓慢释放，通常每 2～4 周注射一次，主要用于 <strong>FTM（跨性别男性）雄激素治疗</strong>。德国原装进口，品质可靠。
+            1 box includes 1 ampoule, 1ml, containing 250mg testosterone enanthate.<br>
+            Testosterone enanthate is a long-acting esterified testosterone that releases gradually after intramuscular injection, usually once every 2–4 weeks. Mainly used for <strong>FTM (transgender male) androgen therapy</strong>. Original German import with reliable quality.
           </p>
         </div>
         <div class="card-footer">
-          <a class="buy-btn" href="https://t.me/Kanna_Pharmacy" target="_blank">💬 联系购买</a>
+          <a class="buy-btn" href="https://t.me/Kanna_Pharmacy" target="_blank">💬 Contact to Buy</a>
         </div>
       </div>
 
@@ -861,7 +858,7 @@
 </main>
 
 <footer>
-  <p>Kanna Pharmacy · 仅作信息参考，具体用药请遵医嘱 · <a href="https://t.me/Kanna_Pharmacy" target="_blank" style="color:var(--purple)">Telegram 联系客服</a></p>
+  <p>Kanna Pharmacy · For informational reference only; please follow medical advice for specific medication use · <a href="https://t.me/Kanna_Pharmacy" target="_blank" style="color:var(--purple)">Contact support on Telegram</a></p>
 </footer>
 
 </body>
